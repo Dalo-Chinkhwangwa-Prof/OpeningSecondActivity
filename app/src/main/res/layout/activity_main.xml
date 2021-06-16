@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:text="0"
+        android:gravity="bottom|end"
+        android:textAlignment="textEnd"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toTopOf="@+id/ac_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1.5"
+        />
+    <!--First Row-->
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/ac_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="AC"
+        app:layout_constraintBottom_toTopOf="@+id/seven_button"
+        app:layout_constraintEnd_toStartOf="@+id/negate_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_weight="1"
+        />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/negate_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="+/-"
+        app:layout_constraintBottom_toTopOf="@+id/eight_button"
+        app:layout_constraintEnd_toStartOf="@+id/mod_button"
+        app:layout_constraintStart_toEndOf="@+id/ac_button"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/mod_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="mod"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/nine_button"
+        app:layout_constraintEnd_toStartOf="@+id/divide_button"
+        app:layout_constraintStart_toEndOf="@+id/negate_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        app:layout_constraintVertical_weight="1"
+        style="@style/CalculatorInputButton"
+        android:id="@+id/divide_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="%"
+        app:layout_constraintBottom_toTopOf="@+id/multiply_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mod_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <!--Second Row-->
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/seven_button"
+        app:layout_constraintVertical_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/four_button"
+        app:layout_constraintEnd_toStartOf="@+id/eight_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ac_button" />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/eight_button"
+        android:layout_width="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:layout_height="0dp"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/five_button"
+        app:layout_constraintEnd_toStartOf="@+id/nine_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seven_button"
+        app:layout_constraintTop_toBottomOf="@+id/negate_button" />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/nine_button"
+        app:layout_constraintVertical_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/six_button"
+        app:layout_constraintEnd_toStartOf="@+id/multiply_button"
+        app:layout_constraintStart_toEndOf="@+id/eight_button"
+        app:layout_constraintTop_toBottomOf="@+id/mod_button" />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/multiply_button"
+        android:layout_width="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:layout_height="0dp"
+        android:text="X"
+        app:layout_constraintBottom_toTopOf="@+id/minus_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nine_button"
+        app:layout_constraintTop_toBottomOf="@+id/divide_button" />
+
+    <!--Third Row-->
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/four_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/one_button"
+        app:layout_constraintEnd_toStartOf="@+id/five_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seven_button" />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/five_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="5"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/two_button"
+        app:layout_constraintEnd_toStartOf="@+id/six_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/four_button"
+        app:layout_constraintTop_toBottomOf="@+id/eight_button" />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/six_button"
+        app:layout_constraintVertical_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/three_button"
+        app:layout_constraintEnd_toStartOf="@+id/minus_button"
+        app:layout_constraintStart_toEndOf="@+id/five_button"
+        app:layout_constraintTop_toBottomOf="@+id/nine_button" />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/minus_button"
+        android:layout_width="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:layout_height="0dp"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/plus_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/six_button"
+        app:layout_constraintTop_toBottomOf="@+id/multiply_button" />
+
+    <!--Fourth Row-->
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/one_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/zero_button"
+        app:layout_constraintEnd_toStartOf="@+id/two_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/four_button" />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/two_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/period_button"
+        app:layout_constraintEnd_toStartOf="@+id/three_button"
+        app:layout_constraintStart_toEndOf="@+id/one_button"
+        app:layout_constraintTop_toBottomOf="@+id/five_button" />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/three_button"
+        android:layout_width="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:layout_height="0dp"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/equals_button"
+        app:layout_constraintEnd_toStartOf="@+id/plus_button"
+        app:layout_constraintStart_toEndOf="@+id/two_button"
+        app:layout_constraintTop_toBottomOf="@+id/six_button" />
+
+    <Button
+        android:id="@+id/plus_button"
+        style="@style/CalculatorInputButton"
+        android:layout_width="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:layout_height="0dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/equals_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/three_button"
+        app:layout_constraintTop_toBottomOf="@+id/minus_button" />
+
+    <!--Fifth Row-->
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/zero_button"
+        android:layout_width="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:layout_height="0dp"
+        android:text="0"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/period_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/one_button" />
+
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/period_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:text="."
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/equals_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/zero_button"
+        app:layout_constraintTop_toBottomOf="@+id/two_button" />
+
+    <Button
+        style="@style/CalculatorInputButton"
+        android:id="@+id/equals_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/period_button"
+        app:layout_constraintTop_toBottomOf="@+id/three_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
