@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/cayo">
 
 
@@ -47,7 +48,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/firstname_edittext" />
 
-
+<TextView
+    android:id="@+id/my_text"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="16dp"
+    android:background="#BFFFFFFF"
+    tools:text="Born in [SOME YEAR]"
+    android:visibility="gone"
+    android:padding="16dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/submit_button"
+    app:layout_constraintTop_toBottomOf="@id/yob_edittext"
+    />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/submit_button"
         android:textColor="@color/white"
